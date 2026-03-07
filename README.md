@@ -171,10 +171,21 @@ uv run jupyter lab
 
 ---
 
+## 📖 Agent Handbook (PDF)
+
+전체 내용을 Typst로 조판한 책 형태의 PDF입니다.
+
+> **[`book/agent-handbook.pdf`](book/agent-handbook.pdf)**
+
+6개 Part, 59개 챕터로 구성되어 있으며, 노트북의 코드 + 심화 설명 + 다이어그램을 포함합니다.
+
+---
+
 ## 추가 문서
 
 | 문서 | 내용 |
 |------|------|
+| [`book/agent-handbook.pdf`](book/agent-handbook.pdf) | Agent Handbook 전체 PDF (6 Part, 59 챕터) |
 | [`docs/OBSERVABILITY.md`](docs/OBSERVABILITY.md) | LangSmith / Langfuse 관측성 설정 |
 | [`docs/MODEL_PROVIDERS.md`](docs/MODEL_PROVIDERS.md) | OpenRouter, Ollama, vLLM, LM Studio 등 다른 모델 사용법 |
 | [`docs/SKILLS.md`](docs/SKILLS.md) | LangChain Skills / langchain-ecosystem-skills 설치 및 사용법 |
