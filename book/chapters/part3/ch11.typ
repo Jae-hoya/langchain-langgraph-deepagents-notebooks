@@ -145,7 +145,15 @@ langgraph.json 예시:
 
 == 11.5 개발 서버 실행
 
+#align(center)[#image("../../assets/diagrams/png/local_server_stack.png", width: 84%)]
+
+이 구성도는 로컬 서버를 _하나의 허브_ 로 보면 이해가 쉽다는 점을 보여줍니다. CLI는 서버를 띄우고, Studio는 시각적 디버깅을 제공하며, Python SDK와 REST는 같은 서버 기능을 서로 다른 인터페이스로 소비합니다.
+
 설정 파일이 준비되었으면, 이제 실제로 서버를 띄울 차례입니다. `langgraph dev` 명령은 `langgraph.json`을 읽어 그래프를 로드하고, 인메모리 체크포인터를 자동으로 연결한 뒤, HTTP API 서버를 시작합니다. 서버가 정상적으로 기동되면 세 가지 URL이 출력됩니다.
+
+#align(center)[#image("../../assets/diagrams/png/local_server_topology.png", width: 80%)]
+
+이 장에서 헷갈리기 쉬운 지점은 _서버 하나로 여러 소비자가 붙는다_ 는 점입니다. 같은 로컬 API를 기준으로 CLI는 서버를 띄우고, Studio는 시각화/디버깅을 담당하며, Python SDK와 REST 클라이언트는 동일한 엔드포인트를 서로 다른 방식으로 호출합니다. 즉, `langgraph dev`는 개발 중인 그래프를 위한 _공통 허브_ 라고 생각하면 됩니다.
 
 #warning-box[`langgraph dev`는 개발 전용 서버입니다. 인메모리 체크포인터를 사용하므로 서버를 재시작하면 모든 상태가 초기화됩니다. 프로덕션 환경에서는 `langgraph up` 명령으로 Docker 기반 서버를 실행하고, PostgreSQL 체크포인터를 연결해야 합니다.]
 
@@ -337,6 +345,11 @@ curl -s --request POST \
 `````)
 
 API 문서는 `http://localhost:2024/docs`에서 확인할 수 있습니다.
+
+#note-box[_관계 요약_
+- `langgraph dev` 는 실행 엔진을 띄우는 진입점입니다.
+- Studio는 같은 서버에 붙는 디버깅 UI입니다.
+- SDK와 REST는 자동화/앱 연동을 위한 프로그래밍 인터페이스입니다.]
 
 == 11.10 배포 준비 체크리스트
 

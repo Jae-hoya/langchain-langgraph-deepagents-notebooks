@@ -84,6 +84,12 @@ _추가 비교 정보:_
 
 == 6.2 어떤 걸 선택해야 할까?
 
+#align(center)[#image("../../assets/diagrams/png/framework_selection_tree.png", width: 74%)]
+
+의사결정 트리를 읽는 가장 쉬운 방법은 _"어디까지 직접 제어하고 싶은가?"_ 를 먼저 묻는 것입니다. 도구 호출 몇 개와 프롬프트 조합만으로 충분하면 LangChain, 상태 전이와 재개 시점을 직접 설계해야 하면 LangGraph, 파일/계획/서브에이전트가 기본 탑재된 작업형 에이전트가 필요하면 Deep Agents가 자연스럽습니다.
+
+#note-box[_3줄 규칙_: *빠르게 시작*이면 LangChain, *분기/루프/HITL*이 핵심이면 LangGraph, *코딩·리서치·파일 작업*까지 한 번에 다뤄야 하면 Deep Agents를 우선 검토하세요.]
+
 #code-block(`````python
 "간단한 도구 호출 에이전트가 필요해"     → LangChain
 "조건 분기·루프가 있는 워크플로가 필요해" → LangGraph
@@ -202,4 +208,3 @@ agent.invoke({"messages": [{"role": "user", "content": "3+4?"}]})
 + _LangChain_ — 모델 설정, 도구 패턴, 미들웨어의 기본기를 다진다
 + _LangGraph_ — 조건 분기, 루프, 인간 검토 등 정밀한 그래프 기반 워크플로를 설계한다
 + _Deep Agents_ — 계획, 파일 관리, 서브에이전트를 활용한 프로덕션급 에이전트를 구축한다
-

@@ -1,0 +1,15 @@
+flowchart LR
+    DEV["Develop
+LangGraph / Deep Agents"] --> TEST["Verify
+unit + trajectory eval"] --> TRACE["Observe
+tracing + metrics"] --> DEPLOY["Deploy
+Cloud / Self-hosted"] --> RUN["Operate
+monitoring + feedback"]
+    RUN -. failures / drift .-> TEST
+    RUN -. usage insights .-> DEV
+
+    style DEV fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style TEST fill:#ffd166,stroke:#d4a843,color:#333
+    style TRACE fill:#ed7969,stroke:#c45a4d,color:#fff
+    style DEPLOY fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style RUN fill:#ed7969,stroke:#c45a4d,color:#fff

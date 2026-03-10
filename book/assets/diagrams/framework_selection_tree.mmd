@@ -1,0 +1,23 @@
+flowchart TD
+    Q1{"도구 1~2개로
+빠르게 시작?"}
+    Q1 -- yes --> LC["LangChain
+빠른 프로토타이핑"]
+    Q1 -- no --> Q2{"조건 분기 / 루프 /
+중단-재개가 핵심?"}
+    Q2 -- yes --> LG["LangGraph
+명시적 상태 그래프"]
+    Q2 -- no --> Q3{"파일 작업, 계획,
+서브에이전트가 필요한가?"}
+    Q3 -- yes --> DA["Deep Agents
+올인원 에이전트 하네스"]
+    Q3 -- no --> LC
+    DA -. 내부적으로 .-> LG
+    LG -. 모델 / tool 인터페이스 공유 .-> LC
+
+    style LC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style LG fill:#ed7969,stroke:#c45a4d,color:#fff
+    style DA fill:#ffd166,stroke:#d4a843,color:#333
+    style Q1 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style Q2 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style Q3 fill:#f4f4f4,stroke:#bcbcbc,color:#333

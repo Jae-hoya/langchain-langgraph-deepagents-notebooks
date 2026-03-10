@@ -1,0 +1,14 @@
+flowchart LR
+    UI["React useStream"] --> SUBMIT["submit(messages)"] --> API["LangGraph Server"] --> THREAD["create / resume thread"] --> RUN["assistant run"]
+    RUN --> EV1["token events"] --> UI
+    RUN --> EV2["tool / state events"] --> UI
+    RUN --> EV3["custom events"] --> UI
+    UI --> STORE["messages / loading / error / interrupt"]
+
+    style UI fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style API fill:#ed7969,stroke:#c45a4d,color:#fff
+    style RUN fill:#ed7969,stroke:#c45a4d,color:#fff
+    style STORE fill:#ffd166,stroke:#d4a843,color:#333
+    style EV1 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style EV2 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style EV3 fill:#f4f4f4,stroke:#bcbcbc,color:#333

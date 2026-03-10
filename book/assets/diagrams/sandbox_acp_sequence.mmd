@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Dev as Developer / IDE
+    participant ACP as ACP Server
+    participant Agent as Deep Agent
+    participant Sandbox as Sandbox Backend
+    participant Tool as External Tool / API
+
+    Dev->>ACP: edit request / task
+    ACP->>Agent: prompt + editor context
+    Agent->>Sandbox: execute code / read files
+    Sandbox-->>Agent: stdout, files, artifacts
+    Agent->>Tool: optional MCP / API calls
+    Tool-->>Agent: results
+    Agent-->>ACP: patch / explanation
+    ACP-->>Dev: editor update
+    Note over Sandbox: code runs in isolated environment
+    Note over ACP,Agent: secrets stay outside sandbox

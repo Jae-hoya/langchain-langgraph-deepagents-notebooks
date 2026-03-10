@@ -1,0 +1,17 @@
+flowchart LR
+    subgraph indexing["Offline indexing"]
+        D["Documents"] --> TS["Text Splitter"] --> CH["Chunks"] --> E1["Embeddings"] --> VS["Vector Store"]
+    end
+
+    subgraph query["Online query"]
+        Q["User question"] --> E2["Query embedding / rewrite"] --> RET["Retriever"] --> DOCS["Relevant chunks"] --> LLM["LLM generation"] --> ANS["Answer"]
+    end
+
+    VS -. similarity search .-> RET
+
+    style D fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style Q fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style VS fill:#ffd166,stroke:#d4a843,color:#333
+    style RET fill:#ed7969,stroke:#c45a4d,color:#fff
+    style LLM fill:#ed7969,stroke:#c45a4d,color:#fff
+    style ANS fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
