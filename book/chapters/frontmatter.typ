@@ -241,7 +241,7 @@ Hello! I'm an AI agent ready to help.
   }
 }
 #show outline.entry.where(level: 2): it => {
-  block(above: 0pt, below: 0pt)[
+  block(above: 1.5pt, below: 1.5pt)[
     #pad(left: 24pt)[
       #text(size: 8.5pt, fill: luma(80))[#it]
     ]
