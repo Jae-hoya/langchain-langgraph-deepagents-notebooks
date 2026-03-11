@@ -6,6 +6,7 @@ Usage:
     python build.py --skip-diagrams  # skip mmdc rendering
     python build.py --convert-only   # only run notebook conversion
     python build.py --compile-only   # only run typst compile
+    python build.py --audit-only     # only run PDF audit
 """
 
 import argparse
@@ -88,6 +89,23 @@ def run_compile() -> bool:
         return False
 
 
+def run_audit() -> bool:
+    """Audit compiled PDF layout."""
+    step("Step 4: Auditing compiled PDF layout")
+    result = subprocess.run(
+        [sys.executable, str(SCRIPTS_DIR / "audit_pdf.py"), str(OUTPUT_PDF)],
+        cwd=str(BOOK_DIR.parent),
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 0:
+        print(result.stdout.strip())
+        return True
+    print(result.stdout[:2000])
+    print(result.stderr[:2000])
+    return False
+
+
 def main():
     parser = argparse.ArgumentParser(description="Build Agent Handbook PDF")
     parser.add_argument("--skip-diagrams", action="store_true",
@@ -96,6 +114,8 @@ def main():
                         help="Only convert notebooks, don't compile")
     parser.add_argument("--compile-only", action="store_true",
                         help="Only compile Typst, skip conversion")
+    parser.add_argument("--audit-only", action="store_true",
+                        help="Only audit compiled PDF")
     args = parser.parse_args()
 
     start = time.time()
@@ -105,7 +125,9 @@ def main():
 
     success = True
 
-    if not args.compile_only:
+    if args.audit_only:
+        success = run_audit()
+    elif not args.compile_only:
         if not args.skip_diagrams:
             if not run_diagrams():
                 print("\nWARN Diagram rendering had errors (continuing...)")
@@ -114,8 +136,10 @@ def main():
             print("\nFAIL Notebook conversion failed")
             success = False
 
-    if success and not args.convert_only:
+    if success and not args.convert_only and not args.audit_only:
         if not run_compile():
+            success = False
+        elif not run_audit():
             success = False
 
     elapsed = time.time() - start
