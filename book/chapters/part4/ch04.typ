@@ -347,7 +347,7 @@ print("검색 결과:", custom_backend.grep_raw("설치"))
 
 어떤 백엔드를 선택해야 할지 결정할 때 아래 의사결정 트리를 참고하세요. 핵심 질문은 "데이터가 대화 세션을 넘어 유지되어야 하는가?"와 "에이전트가 로컬 파일 시스템에 접근해야 하는가?"입니다.
 
-#align(center)[#image("../../assets/diagrams/png/backend_decision_tree.png", width: 88%, height: 106mm, fit: "contain")]
+#align(center)[#image("../../assets/diagrams/png/backend_decision_tree.png", width: 92%, height: 122mm, fit: "contain")]
 
 #line(length: 100%, stroke: 0.5pt + luma(200))
 == 핵심 정리
@@ -379,4 +379,3 @@ print("검색 결과:", custom_backend.grep_raw("설치"))
 )
 
 백엔드는 에이전트의 "기억 장치"입니다. `BackendProtocol`이라는 통일된 인터페이스 덕분에, 에이전트 코드를 변경하지 않고 `create_deep_agent()`의 `backend` 파라미터 한 줄만 수정하여 저장소 전략을 완전히 전환할 수 있습니다. 프로토타이핑 단계에서는 `StateBackend`로 빠르게 시작하고, 프로덕션에서는 `CompositeBackend`로 에페메럴과 영속 저장소를 조합하는 것이 가장 일반적인 패턴입니다. 다음 장에서는 에이전트의 컨텍스트 블로트 문제를 해결하는 _서브에이전트_ 패턴을 다룹니다.
-

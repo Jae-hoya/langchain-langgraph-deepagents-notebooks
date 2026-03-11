@@ -191,7 +191,7 @@ print("스트리밍 데모 에이전트 생성 완료")
 
 _샌드박스를 도구로 사용_ (권장)
 
-#align(center)[#image("../../assets/diagrams/png/sandbox_architecture.png", width: 90%, height: 94mm, fit: "contain")]
+#align(center)[#image("../../assets/diagrams/png/sandbox_architecture.png", width: 92%, height: 118mm, fit: "contain")]
 
 #warning-box[_절대 샌드박스 안에 시크릿을 넣지 마세요._ 에이전트는 환경 변수를 읽거나 파일을 탐색하여 자격 증명을 외부로 유출할 수 있습니다. 자격 증명은 반드시 호스트(에이전트 측)의 전용 도구에서만 관리하세요.]
 
@@ -460,4 +460,3 @@ deepagents-cli skills create my-skill
 )
 
 이 장에서 다룬 고급 기능들(HITL, 스트리밍, 샌드박스, ACP, CLI)은 에이전트를 프로덕션 환경에서 안전하게 운영하기 위한 필수 요소입니다. 다음 장에서는 `create_deep_agent()` 내부에서 이 모든 기능을 조립하는 _AgentHarness_의 구조를 분석합니다.
-

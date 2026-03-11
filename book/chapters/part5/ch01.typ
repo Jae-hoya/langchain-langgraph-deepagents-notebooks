@@ -493,7 +493,7 @@ class AuditMiddleware(AgentMiddleware):
 
 `middleware=[A, B, C]` 등록 시:
 
-#align(center)[#image("../../assets/diagrams/png/middleware_execution_order.png", width: 76%, height: 175mm, fit: "contain")]
+#align(center)[#image("../../assets/diagrams/png/middleware_execution_order.png", width: 86%, height: 190mm, fit: "contain")]
 
 === 실전 팁
 - _PII 검출은 로깅보다 먼저_ 등록해야 로그에 PII가 포함되지 않습니다.
@@ -576,4 +576,3 @@ production_agent = create_agent(
 )
 
 미들웨어는 단일 에이전트의 동작을 제어하는 강력한 도구입니다. 그러나 복잡한 도메인 문제를 해결하려면 여러 에이전트가 협력하는 멀티에이전트 아키텍처가 필요합니다. 다음 장에서는 감독자 패턴으로 서브에이전트를 조율하는 멀티에이전트 시스템을 다룹니다.
-
