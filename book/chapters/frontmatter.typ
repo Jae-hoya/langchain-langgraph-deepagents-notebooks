@@ -251,5 +251,5 @@ Hello! I'm an AI agent ready to help.
 #outline(
   title: none,
   indent: 1em,
-  depth: 2,
+  depth: 1,
 )

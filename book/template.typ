@@ -159,7 +159,7 @@
 }
 
 // ─── Part Page ────────────────────────────────────────────────
-#let part-page(number, title, subtitle: none) = {
+#let part-page(number, title, subtitle: none, chapters: none) = {
   pagebreak(weak: true)
   page(
     header: none,
@@ -179,6 +179,25 @@
       #if subtitle != none {
         v(10pt)
         text(size: 13pt, fill: luma(120), style: "italic", font: font-body)[#subtitle]
+      }
+      #if chapters != none {
+        v(20pt)
+        text(size: 9pt, fill: luma(140), tracking: 1.2pt, weight: "medium")[이 파트에서 다루는 내용]
+        v(8pt)
+        block(
+          width: 78%,
+          fill: white,
+          stroke: 0.5pt + luma(225),
+          inset: (left: 14pt, right: 14pt, top: 12pt, bottom: 12pt),
+          radius: 4pt,
+        )[
+          #set text(size: 9.2pt, fill: luma(55))
+          #set par(leading: 0.65em)
+          #for chapter in chapters [
+            - #chapter
+            #v(2pt)
+          ]
+        ]
       }
     ]
     #v(1fr)
