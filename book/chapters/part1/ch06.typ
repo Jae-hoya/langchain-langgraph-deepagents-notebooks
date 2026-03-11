@@ -10,6 +10,16 @@
 #learning-header()
 #learning-objectives([LangChain, LangGraph, Deep Agents 세 프레임워크의 _핵심 차이점_을 이해한다], [각 프레임워크의 _적합한 사용 사례_를 판단할 수 있다], [중급 과정으로의 _학습 경로_를 선택할 수 있다])
 
+#chapter-question-box[
+이 문제는 결국 하나로 귀결됩니다. _"지금 내 문제에 필요한 것이 빠른 시작인지, 정밀한 제어인지, 아니면 계획·파일·서브에이전트까지 포함한 작업형 하네스인지?"_
+]
+
+#chapter-key-points((
+  [LangChain은 빠른 시작과 단순한 도구 호출에 가장 가볍습니다.],
+  [LangGraph는 상태 전이, 분기, 병렬 처리, interrupt/resume 같은 정밀 제어에 강합니다.],
+  [Deep Agents는 계획, 파일시스템, 메모리, 서브에이전트가 필요한 복합 작업에 잘 맞습니다.],
+))
+
 == 6.1 프레임워크 비교
 
 #table(

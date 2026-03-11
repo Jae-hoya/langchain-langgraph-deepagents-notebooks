@@ -262,6 +262,49 @@
   sym.excl, "Warning", color-accent, body
 )
 
+// ─── Chapter Start Boxes ────────────────────────────────────
+#let chapter-question-box(body) = {
+  v(8pt)
+  block(
+    width: 100%,
+    fill: rgb("#FAFAFA"),
+    stroke: (left: 3pt + color-secondary),
+    inset: (left: 14pt, right: 12pt, top: 10pt, bottom: 10pt),
+    radius: (top-right: 3pt, bottom-right: 3pt),
+    breakable: true,
+  )[
+    #text(weight: "bold", fill: color-secondary, size: 9pt, tracking: 0.5pt)[
+      핵심 질문
+    ]
+    #v(4pt)
+    #set text(size: 9.5pt)
+    #body
+  ]
+  v(6pt)
+}
+
+#let chapter-key-points(items) = {
+  v(6pt)
+  block(
+    width: 100%,
+    fill: rgb("#FAFAFA"),
+    stroke: (left: 3pt + color-primary),
+    inset: (left: 14pt, right: 12pt, top: 10pt, bottom: 10pt),
+    radius: (top-right: 3pt, bottom-right: 3pt),
+    breakable: true,
+  )[
+    #text(weight: "bold", fill: color-primary-dark, size: 9pt, tracking: 0.5pt)[
+      한눈에 보는 핵심
+    ]
+    #v(4pt)
+    #set text(size: 9.5pt)
+    #for item in items [
+      - #item
+    ]
+  ]
+  v(6pt)
+}
+
 // ─── Chapter Summary Section ─────────────────────────────────
 #let chapter-summary-header() = {
   v(16pt)

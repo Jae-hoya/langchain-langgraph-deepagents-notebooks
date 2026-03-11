@@ -10,6 +10,16 @@ Part 3의 마지막 장입니다. 12개 장에 걸쳐 `Graph API`와 `Functional
 #learning-header()
 #learning-objectives([Graph API와 Functional API의 차이를 비교한다], [동일한 에이전트를 두 API로 구현한다], [Pregel 런타임의 내부 구조를 이해한다], [슈퍼스텝 실행 모델을 안다], [프로젝트에 맞는 API를 선택하는 기준을 세운다])
 
+#chapter-question-box[
+둘 다 같은 LangGraph 런타임 위에서 실행된다면, _"언제는 그래프로 명시하고 언제는 함수 흐름으로 충분한가?"_ 가 이 장의 핵심 질문입니다.
+]
+
+#chapter-key-points((
+  [Graph API는 흐름을 눈으로 보고 관리해야 할 때 유리합니다.],
+  [Functional API는 Python 함수 흐름을 살리면서 내구성을 얻고 싶을 때 간결합니다.],
+  [둘 중 하나만 고집하기보다, 문제 구조에 따라 섞어 쓰는 것이 실전적입니다.],
+))
+
 == 13.1 환경 설정
 
 #code-block(`````python

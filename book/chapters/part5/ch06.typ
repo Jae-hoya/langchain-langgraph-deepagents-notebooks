@@ -10,6 +10,16 @@
 #learning-header()
 #learning-objectives([SQL 에이전트의 8단계 워크플로우를 이해한다], [`SQLDatabase`와 `SQLDatabaseToolkit`의 4개 도구를 활용한다], [LangChain `create_agent`로 ReAct 기반 SQL Agent를 구현한다], [`HumanInTheLoopMiddleware`로 쿼리 실행 전 승인을 추가한다], [LangGraph `StateGraph`로 커스텀 SQL Agent를 구축한다], [`bind_tools`와 `tool_choice`로 강제 도구 호출을 설정한다], [`interrupt()`와 `Command(resume=...)`로 쿼리 리뷰를 구현한다])
 
+#chapter-question-box[
+SQL 에이전트의 본질은 _"자연어를 SQL로 바꾸는 것"_ 자체보다, _"그 쿼리를 어떤 순서로 검증하고 누가 실행을 승인할 것인가?"_ 에 있습니다.
+]
+
+#chapter-key-points((
+  [실무 SQL 에이전트는 생성보다 검증과 실행 통제가 더 중요합니다.],
+  [읽기 전용 권한, 접근 테이블 제한, HITL은 시스템 프롬프트보다 더 근본적인 안전장치입니다.],
+  [순서를 강제하고 싶으면 LangChain 기본 루프보다 LangGraph 커스텀 그래프가 더 적합합니다.],
+))
+
 == 6.1 환경 설정 (SQLite + Chinook DB)
 
 SQL 에이전트를 구축하기 위해 LLM과 데이터베이스를 연결합니다. Chinook DB는 디지털 음악 스토어의 샘플 데이터베이스로, Artist, Album, Track, Invoice 등 11개 테이블을 포함합니다. `SQLDatabase` 래퍼는 SQLAlchemy를 기반으로 데이터베이스 메타데이터(테이블 목록, 스키마, 샘플 데이터)에 프로그래밍 방식으로 접근하는 인터페이스를 제공합니다.
@@ -464,5 +474,4 @@ LangGraph SQL 에이전트 컴파일됨.
 )
 
 SQL 에이전트는 정형 데이터에 자연어 인터페이스를 제공합니다. 다음 장에서는 코드 실행 샌드박스를 활용하여 비정형 데이터(CSV, 이미지 등)를 프로그래밍 방식으로 분석하는 데이터 분석 에이전트를 구축합니다.
-
 

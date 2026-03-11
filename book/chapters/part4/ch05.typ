@@ -14,6 +14,16 @@
 #learning-header()
 #learning-objectives([서브에이전트가 해결하는 문제(컨텍스트 블로트)를 이해한다], [`SubAgent` dict와 `CompiledSubAgent`로 서브에이전트를 정의한다], [빌트인 general-purpose 서브에이전트를 이해하고 오버라이드한다], [컨텍스트 전파와 네임스페이스 키를 활용한다], [멀티 서브에이전트 파이프라인 패턴을 구현한다])
 
+#chapter-question-box[
+이 장의 질문은 단순합니다. _"메인 에이전트가 모든 중간 결과를 다 들고 있을 필요가 있는가, 아니면 세부 작업을 분리해 결과만 받는 편이 나은가?"_
+]
+
+#chapter-key-points((
+  [서브에이전트의 가장 큰 목적은 컨텍스트 블로트를 줄이는 것입니다.],
+  [전문 역할별 시스템 프롬프트와 도구를 분리하면 선택과 위임이 쉬워집니다.],
+  [단순 단발 작업에는 서브에이전트가 오히려 과할 수 있습니다.],
+))
+
 #code-block(`````python
 # 환경 설정
 from dotenv import load_dotenv

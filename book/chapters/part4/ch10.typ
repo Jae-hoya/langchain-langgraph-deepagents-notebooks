@@ -14,6 +14,16 @@
 #learning-header()
 #learning-objectives([샌드박스 격리 개념과 보안 원칙을 이해한다], [E2B, Modal, Docker 등 샌드박스 프로바이더를 비교한다], [ACP(Agent Communication Protocol)의 개요와 용도를 안다], [에이전트-에디터 통합 패턴을 이해한다], [샌드박스 + ACP 통합 아키텍처를 설계한다])
 
+#chapter-question-box[
+에이전트에게 코드 실행 권한을 주되 안전성과 개발자 경험을 동시에 지키려면, _"어디에서 추론하고 어디에서 실행할 것인가?"_ 를 먼저 정해야 합니다.
+]
+
+#chapter-key-points((
+  [샌드박스는 실행 권한을 격리하고, ACP는 에디터와의 연결을 담당합니다.],
+  [실무에서는 Agent-in-Sandbox보다 Sandbox-as-Tool이 보안 경계가 더 분명합니다.],
+  [프로바이더 선택은 GPU, 콜드 스타트, 비용 구조 같은 운영 요구와 연결됩니다.],
+))
+
 #code-block(`````python
 # 환경 설정
 from dotenv import load_dotenv

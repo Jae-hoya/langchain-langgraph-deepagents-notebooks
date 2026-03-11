@@ -10,6 +10,16 @@
 #learning-header()
 #learning-objectives([RAG 파이프라인(인덱싱 -\> 검색 -\> 생성)의 전체 구조를 이해한다], [`RecursiveCharacterTextSplitter`로 문서를 청킹한다], [`InMemoryVectorStore`로 벡터 스토어를 구축한다], [LangChain `create_agent` + `@tool`로 RAG Agent를 구현한다], [`@dynamic_prompt` 미들웨어로 RAG Chain(단일 LLM 호출)을 구현한다], [LangGraph `StateGraph`로 커스텀 RAG 에이전트를 구축한다], [`GradeDocuments` 구조화 출력으로 문서 관련성을 평가한다], [쿼리 리라이트와 조건부 라우팅을 구현한다])
 
+#chapter-question-box[
+이 장의 중심 질문은 _"검색을 한 번 하고 바로 답할 것인가, 에이전트에게 검색을 맡길 것인가, 아니면 검색 이후의 판단 흐름까지 그래프로 직접 통제할 것인가?"_ 입니다.
+]
+
+#chapter-key-points((
+  [RAG는 오프라인 인덱싱과 온라인 질의 처리를 분리해서 보면 구조가 훨씬 단순해집니다.],
+  [단순 Q&A는 Chain, 유연한 검색은 Agent, 평가·재작성·재시도는 Graph가 잘 맞습니다.],
+  [검색 품질 문제는 보통 모델보다 청킹, 검색, 관련성 판단 설계에서 먼저 발생합니다.],
+))
+
 == 5.1 환경 설정
 
 RAG 파이프라인을 구축하기 위해 LLM과 임베딩 모델을 초기화합니다. `ChatOpenAI`는 텍스트 생성을, `OpenAIEmbeddings`는 문서를 벡터로 변환하는 역할을 담당합니다. 두 모델은 RAG의 서로 다른 단계에서 사용되므로 모두 필요합니다.
