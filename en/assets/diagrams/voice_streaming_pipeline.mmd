@@ -1,0 +1,18 @@
+flowchart TD
+    MIC["Audio in"]
+    STT["STT stream<br/>~200ms final transcript"]
+    AG["Agent stream<br/>~300ms first token"]
+    TTS["TTS stream<br/>~150ms first audio"]
+    OUT["Audio out"]
+    NOTE["Target TTFA < 700ms<br/>with overlap between stages"]:::note
+
+    MIC --> STT --> AG --> TTS --> OUT --> NOTE
+    STT -. partial transcript .-> AG
+    AG -. token stream .-> TTS
+
+    classDef note fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style MIC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style STT fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style AG fill:#ed7969,stroke:#c45a4d,color:#fff
+    style TTS fill:#ffd166,stroke:#d4a843,color:#333
+    style OUT fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c

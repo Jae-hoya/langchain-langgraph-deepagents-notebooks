@@ -1,0 +1,21 @@
+flowchart LR
+    MIC["Mic Audio"] --> STT["STT
+150~250ms"]
+    STT --> AG["Agent
+200~300ms"]
+    AG --> TTS["TTS
+150~250ms"]
+    TTS --> SPK["Speaker Output"]
+
+    STT -.partial transcript.-> AG
+    AG -.token stream.-> TTS
+
+    B[("Target: First audio < 700ms")]
+    STT --> B
+    AG --> B
+    TTS --> B
+
+    style STT fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c,font-weight:bold
+    style AG fill:#ed7969,stroke:#c45a4d,color:#fff,font-weight:bold
+    style TTS fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c,font-weight:bold
+    style B fill:#ffd166,stroke:#d4a843,color:#333,font-weight:bold

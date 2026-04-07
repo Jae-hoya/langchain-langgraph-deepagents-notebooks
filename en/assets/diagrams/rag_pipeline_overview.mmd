@@ -1,0 +1,19 @@
+flowchart TD
+    subgraph OFFLINE["offline preparation"]
+        DOC["original document"] --> SPLIT["Text Splitter"] --> CHUNK["Chunks"] --> EMB["Embeddings"] --> VS["Vector Store"]
+    end
+
+    subgraph ONLINE["When to query"]
+        Q["user questions"] --> RET["Retriever / Search"]
+        RET --> CTX["Related article context"]
+        Q --> LLM["LLM Generation"]
+        CTX --> LLM
+        LLM --> ANS["final answer"]
+    end
+
+    VS -. similarity search .-> RET
+
+    style DOC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style VS fill:#ffd166,stroke:#d4a843,color:#333,font-weight:bold
+    style LLM fill:#ed7969,stroke:#c45a4d,color:#fff,font-weight:bold
+    style ANS fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c

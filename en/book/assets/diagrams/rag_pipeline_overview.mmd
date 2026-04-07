@@ -1,0 +1,19 @@
+flowchart TD
+    subgraph OFFLINE["오프라인 준비"]
+        DOC["원본 문서"] --> SPLIT["Text Splitter"] --> CHUNK["Chunks"] --> EMB["Embeddings"] --> VS["Vector Store"]
+    end
+
+    subgraph ONLINE["질의 시점"]
+        Q["사용자 질문"] --> RET["Retriever / Search"]
+        RET --> CTX["관련 문서 컨텍스트"]
+        Q --> LLM["LLM Generation"]
+        CTX --> LLM
+        LLM --> ANS["최종 답변"]
+    end
+
+    VS -. similarity search .-> RET
+
+    style DOC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style VS fill:#ffd166,stroke:#d4a843,color:#333,font-weight:bold
+    style LLM fill:#ed7969,stroke:#c45a4d,color:#fff,font-weight:bold
+    style ANS fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c

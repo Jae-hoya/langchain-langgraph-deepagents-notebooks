@@ -1,0 +1,33 @@
+graph TD
+    Q["agent file<br/>Is it necessary?"]
+    Q --> A["Only temporary work required"]
+    Q --> B["Local file access required"]
+    Q --> C["data between conversations<br/>maintenance required"]
+    Q --> D["Temporary + Permanent Mix"]
+    Q --> E["You also need a shell command"]
+
+    A --> A1["StateBackend<br/>(default)"]
+    B --> B1["read only"]
+    B --> B2["Writing too"]
+    B1 --> B1R["FilesystemBackend<br/>(virtual_mode=True)"]
+    B2 --> B2R["FilesystemBackend<br/>+ Human-in-the-Loop"]
+    C --> C1["StoreBackend"]
+    D --> D1["CompositeBackend"]
+    E --> E1["development environment"]
+    E --> E2["production"]
+    E1 --> E1R["LocalShellBackend"]
+    E2 --> E2R["sandbox<br/>(Modal, Daytona, etc.)"]
+
+    style Q fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c,font-weight:bold
+    style A fill:#d4eff1,stroke:#83ced2,color:#333
+    style B fill:#d4eff1,stroke:#83ced2,color:#333
+    style C fill:#d4eff1,stroke:#83ced2,color:#333
+    style D fill:#d4eff1,stroke:#83ced2,color:#333
+    style E fill:#d4eff1,stroke:#83ced2,color:#333
+    style A1 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style B1R fill:#ed7969,stroke:#c45a4d,color:#fff
+    style B2R fill:#ed7969,stroke:#c45a4d,color:#fff
+    style C1 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style D1 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style E1R fill:#ed7969,stroke:#c45a4d,color:#fff
+    style E2R fill:#ed7969,stroke:#c45a4d,color:#fff

@@ -1,0 +1,13 @@
+graph TD
+    A["Agent → Attempt to call write_file"] --> B["stop running<br/>(interrupt_on set)"]
+    B --> C["Ask user for permission"]
+    C --> D["Approve<br/>Run with original arguments"]
+    C --> E["Edit<br/>Run with modified arguments"]
+    C --> F["Reject<br/>Skip tool call"]
+
+    style A fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style B fill:#ffd166,stroke:#d4a843,color:#333
+    style C fill:#ed7969,stroke:#c45a4d,color:#fff
+    style D fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style E fill:#ffd166,stroke:#d4a843,color:#333
+    style F fill:#ed7969,stroke:#c45a4d,color:#fff

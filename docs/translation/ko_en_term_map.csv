@@ -1,0 +1,115 @@
+section,korean,preferred_english,notes
+Repository / curriculum labels,프로젝트 구조,Repository Layout,Use for top-level README section headers.
+Repository / curriculum labels,시작하기,Getting Started,Preferred onboarding heading.
+Repository / curriculum labels,환경 변수,Environment Variables,Use in README and setup chapters.
+Repository / curriculum labels,단계별 커리큘럼,Curriculum at a Glance,Preferred README section title; use “curriculum” in running text.
+Repository / curriculum labels,추가 문서,Additional Documents,Preferred README/supporting docs heading.
+Repository / curriculum labels,대상 독자,Target Audience,Use in handbook frontmatter or course intros.
+Repository / curriculum labels,이 책의 특징,What This Book Offers,Preferred handbook frontmatter heading; avoid overly literal “Features of This Book”.
+Repository / curriculum labels,이 책의 구성,How This Book Is Organized,Preferred handbook/frontmatter heading.
+Repository / curriculum labels,이 책의 사용법,How to Use This Book,Matches common handbook style.
+Repository / curriculum labels,실습 중심,hands-on,"Use adjectivally: “a hands-on guide”, “hands-on examples”."
+Repository / curriculum labels,실전 응용,applied,"Use for course/example descriptions: “applied examples”, “applied patterns”."
+Repository / curriculum labels,초급,Beginner,Track/difficulty label.
+Repository / curriculum labels,중급,Intermediate,Track/difficulty label.
+Repository / curriculum labels,고급,Advanced,Track/difficulty label.
+Repository / curriculum labels,에이전트 입문,Agent Foundations,Preferred track title; broader and more natural than “Agent Introduction”.
+Repository / curriculum labels,실전 응용 예제,Applied Examples,Preferred folder/section title for `06_examples`.
+Notebook / handbook structural labels,학습 목표,Learning Objectives,Canonical notebook/chapter label.
+Notebook / handbook structural labels,환경 설정,Environment Setup,Use for setup chapters/notebooks.
+Notebook / handbook structural labels,시작하기 전에,Before You Start,Subtitle for setup/introduction material.
+Notebook / handbook structural labels,동작 확인,Smoke Test,Preferred concise label for first-run validation steps.
+Notebook / handbook structural labels,요약,Summary,Canonical closing section label.
+Notebook / handbook structural labels,참고 문서,References,Preferred final citation section label.
+Notebook / handbook structural labels,다음 단계,Next Steps,Canonical transition label.
+Notebook / handbook structural labels,핵심 내용,Key Concepts,Preferred section label in educational material.
+Notebook / handbook structural labels,실습 환경,Practice Environment,Use in handbook/frontmatter sections about runtime setup.
+Notebook / handbook structural labels,코드 블록 읽기,Reading Code Blocks,Handbook instructional label.
+Notebook / handbook structural labels,박스 유형,Callout Types,Preferred label for note/tip/warning box explanations.
+Notebook / handbook structural labels,주의,Caution,Use for warning-style callout titles.
+Notebook / handbook structural labels,팁,Tip,Use for tip-style callout titles.
+Notebook / handbook structural labels,노트,Note,Use for note-style callout titles.
+Frameworks / protocols / products,LangChain,LangChain,Keep unchanged.
+Frameworks / protocols / products,LangGraph,LangGraph,Keep unchanged.
+Frameworks / protocols / products,Deep Agents,Deep Agents,Keep unchanged.
+Frameworks / protocols / products,LangSmith,LangSmith,Keep unchanged.
+Frameworks / protocols / products,Langfuse,Langfuse,Keep unchanged.
+Frameworks / protocols / products,모델 컨텍스트 프로토콜,Model Context Protocol (MCP),"Prefer full expansion on first mention, then MCP."
+Frameworks / protocols / products,에이전트 클라이언트 프로토콜,Agent Client Protocol (ACP),"Prefer full expansion on first mention, then ACP."
+Frameworks / protocols / products,관측성,observability,Preferred term in prose.
+Frameworks / protocols / products,관측 가능성,observability,Treat as same term as 관측성.
+Agent patterns / execution model,에이전트,agent,Lowercase in running text unless starting a sentence or heading.
+Agent patterns / execution model,워크플로,workflow,Preferred generic term.
+Agent patterns / execution model,오케스트레이터,orchestrator,Preferred role/system term.
+Agent patterns / execution model,워커,worker,Preferred role term.
+Agent patterns / execution model,서브에이전트,subagent,Use closed form “subagent” for consistency.
+Agent patterns / execution model,핸드오프,handoff,Preferred routing/control transfer term.
+Agent patterns / execution model,라우터,router,Preferred routing component term.
+Agent patterns / execution model,리액트,ReAct,Keep the established pattern name exactly.
+Agent patterns / execution model,휴먼 인 더 루프,human-in-the-loop (HITL),"Use full phrase on first mention, HITL afterward if helpful."
+Agent patterns / execution model,중단,interrupt,Use as noun or verb depending on sentence.
+Agent patterns / execution model,재개,resume,Use as noun/verb depending on sentence.
+Agent patterns / execution model,내구성 실행,durable execution,Preferred LangGraph/agent runtime term.
+Agent patterns / execution model,슈퍼스텝,superstep,Pregel execution term.
+Agent patterns / execution model,프리젤,Pregel,Keep framework model name unchanged.
+Agent patterns / execution model,멀티 에이전트,multi-agent,Always hyphenate when used adjectivally.
+State / memory / runtime,상태,state,Preferred core runtime term.
+State / memory / runtime,체크포인터,checkpointer,"Use “checkpoint” only for the saved artifact, “checkpointer” for the component."
+State / memory / runtime,스레드 ID,thread ID,Use this exact capitalization.
+State / memory / runtime,런타임 컨텍스트,runtime context,Preferred phrase for execution-time context.
+State / memory / runtime,단기 메모리,short-term memory,Preferred memory category term.
+State / memory / runtime,장기 메모리,long-term memory,Preferred memory category term.
+State / memory / runtime,의미 기억,semantic memory,Memory taxonomy term.
+State / memory / runtime,일화 기억,episodic memory,Memory taxonomy term.
+State / memory / runtime,절차 기억,procedural memory,Memory taxonomy term.
+State / memory / runtime,스토어,store,Lowercase in prose when generic; preserve class names separately.
+State / memory / runtime,인메모리 스토어,InMemoryStore,Preserve official class name exactly.
+State / memory / runtime,에이전트 상태,AgentState,Preserve official schema/class name exactly.
+State / memory / runtime,메시지 상태,MessagesState,Preserve official schema/class name exactly.
+State / memory / runtime,컨텍스트 스키마,`context_schema`,Keep identifier form in technical explanations.
+State / memory / runtime,상태 스키마,`state_schema`,Keep identifier form in technical explanations.
+Tools / APIs / interfaces,도구,tool,Preferred generic tool term.
+Tools / APIs / interfaces,도구 호출,tool calling,Preferred structured-output / agent term.
+Tools / APIs / interfaces,구조화된 출력,structured output,Preferred output-format term.
+Tools / APIs / interfaces,미들웨어,middleware,Preferred runtime policy/interceptor term.
+Tools / APIs / interfaces,가드레일,guardrail,Preferred safety/control term.
+Tools / APIs / interfaces,개인 식별 정보,personally identifiable information (PII),Expand on first mention if needed.
+Tools / APIs / interfaces,툴 런타임,`ToolRuntime`,Preserve official runtime type exactly.
+Tools / APIs / interfaces,그래프 API,Graph API,Capitalize as named API surface.
+Tools / APIs / interfaces,함수형 API,Functional API,Capitalize as named API surface.
+Tools / APIs / interfaces,엔트리포인트,`@entrypoint`,Preserve decorator exactly.
+Tools / APIs / interfaces,태스크,`@task`,Preserve decorator exactly.
+Tools / APIs / interfaces,상태 그래프,`StateGraph`,Preserve class name exactly.
+Tools / APIs / interfaces,센드,`Send`,Preserve API type exactly.
+Tools / APIs / interfaces,커맨드,`Command`,Preserve API type exactly.
+Tools / APIs / interfaces,create_agent,`create_agent()`,Preserve function name exactly.
+Tools / APIs / interfaces,create_deep_agent,`create_deep_agent()`,Preserve function name exactly.
+Backends / execution environments,백엔드,backend,Preferred generic term.
+Backends / execution environments,상태 백엔드,`StateBackend`,Preserve class/type name exactly.
+Backends / execution environments,파일시스템 백엔드,`FilesystemBackend`,Preserve class/type name exactly.
+Backends / execution environments,스토어 백엔드,`StoreBackend`,Preserve class/type name exactly.
+Backends / execution environments,복합 백엔드,`CompositeBackend`,Preserve class/type name exactly.
+Backends / execution environments,로컬 셸 백엔드,`LocalShellBackend`,Preserve class/type name exactly.
+Backends / execution environments,가상 모드,`virtual_mode=True` / virtual mode,Keep code literal in examples; use “virtual mode” in prose.
+Backends / execution environments,샌드박스,sandbox,Preferred isolated runtime term.
+Backends / execution environments,Modal,Modal,Keep provider name unchanged.
+Backends / execution environments,Daytona,Daytona,Keep provider name unchanged.
+Backends / execution environments,Runloop,Runloop,Keep provider name unchanged.
+Retrieval / data / search,검색 증강 생성,retrieval-augmented generation (RAG),Use full expansion on first mention if helpful.
+Retrieval / data / search,리트리버,retriever,Preferred retrieval component term.
+Retrieval / data / search,임베딩,embedding,Preferred representation term.
+Retrieval / data / search,벡터 스토어,vector store,Use this exact spacing.
+Retrieval / data / search,청킹,chunking,Preferred document-splitting term.
+Retrieval / data / search,리랭킹,reranking,Use closed form noun.
+Retrieval / data / search,SQL 에이전트,SQL agent,Preferred phrase for NL-to-SQL agents.
+Retrieval / data / search,SQLDatabaseToolkit,`SQLDatabaseToolkit`,Preserve class name exactly.
+Streaming / frontend / quality,스트리밍,streaming,Preferred incremental-delivery term.
+Streaming / frontend / quality,스트림 이벤트,`StreamEvent`,Preserve official event type when referring to the API.
+Streaming / frontend / quality,토큰 스트리밍,token streaming,Preferred phrase.
+Streaming / frontend / quality,첫 토큰까지 걸리는 시간,time to first token (TTFT),Expand on first mention if useful.
+Streaming / frontend / quality,첫 오디오까지 걸리는 시간,time to first audio (TTFA),Expand on first mention if useful.
+Streaming / frontend / quality,평가,evaluation,Preferred quality measurement term.
+Streaming / frontend / quality,실행 궤적,trajectory,Preferred execution-path term.
+Streaming / frontend / quality,LLM 판정자,LLM-as-Judge,Use repo’s established term casing.
+Streaming / frontend / quality,사용자 정의 이벤트,custom event,Preferred streaming/frontend phrase.
+Streaming / frontend / quality,프론트엔드 스트리밍,frontend streaming,Preferred section/chapter phrase.

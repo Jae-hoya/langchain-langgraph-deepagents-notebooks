@@ -1,0 +1,28 @@
+flowchart TD
+    DEV["Developer / IDE"]
+    ACP["ACP Server"]
+    AGENT["Deep Agent"]
+    SB["Sandbox Backend"]
+    TOOL["External Tool / API"]
+    RESULT["patch / explanation<br/>editor update"]
+
+    DEV --> ACP --> AGENT
+    AGENT --> SB
+    SB --> AGENT
+    AGENT --> TOOL
+    TOOL --> AGENT
+    AGENT --> RESULT --> DEV
+
+    NOTE1["code runs in isolated environment"]
+    NOTE2["secrets stay outside sandbox"]
+    SB -.-> NOTE1
+    ACP -.-> NOTE2
+
+    style DEV fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style ACP fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style AGENT fill:#ed7969,stroke:#c45a4d,color:#fff
+    style SB fill:#ffd166,stroke:#d4a843,color:#333
+    style TOOL fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style RESULT fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style NOTE1 fill:#ffffff,stroke:#bcbcbc,color:#666
+    style NOTE2 fill:#ffffff,stroke:#bcbcbc,color:#666

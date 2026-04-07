@@ -1,0 +1,16 @@
+graph TD
+    A["User Request"]
+    B["before_model<br/>Processing before model call<br/>(Input validation, logging, trimming)"]
+    C["Model<br/>with wrap_model_call<br/>Wrapping possible (retry, fallback)"]
+    D["after_model<br/>Post-processing of model response<br/>(logging, filtering)"]
+    E["Tools<br/>with wrap_tool_call<br/>Wrapping possible"]
+    F["Response"]
+
+    A --> B --> C --> D --> E --> F
+
+    style A fill:#f0f0f0,stroke:#ccc,color:#333
+    style B fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style C fill:#ed7969,stroke:#c45a4d,color:#fff
+    style D fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style E fill:#ed7969,stroke:#c45a4d,color:#fff
+    style F fill:#f0f0f0,stroke:#ccc,color:#333

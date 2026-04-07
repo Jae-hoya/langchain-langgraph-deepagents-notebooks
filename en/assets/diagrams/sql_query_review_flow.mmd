@@ -1,0 +1,15 @@
+flowchart TD
+    Q["Natural language question"] --> LT["List tables"] --> GS["Get schema"]
+    GS --> GQ["Generate SQL"] --> CQ["Check query"] --> RV{"Human review?"}
+    RV -- approve --> EX["Execute query"] --> ANS["Summarize result"]
+    RV -- edit --> GQ
+    RV -- reject --> STOP["Explain rejection<br/>ask follow-up"]
+    CQ -. invalid .-> GQ
+
+    style Q fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style GQ fill:#ed7969,stroke:#c45a4d,color:#fff
+    style CQ fill:#ffd166,stroke:#d4a843,color:#333
+    style RV fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style EX fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style ANS fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style STOP fill:#ed7969,stroke:#c45a4d,color:#fff

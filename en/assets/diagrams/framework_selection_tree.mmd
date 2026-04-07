@@ -1,0 +1,16 @@
+flowchart LR
+    Q1{"With 1-2 tools<br/>Start quickly?"}
+    Q1 -- yes --> LC["LangChain<br/>rapid prototyping"]
+    Q1 -- no --> Q2{"conditional branch / loop /<br/>Is suspension-resumption the key?"}
+    Q2 -- yes --> LG["LangGraph<br/>explicit state graph"]
+    Q2 -- no --> Q3{"Working with files, planning,<br/>Do you need a subagent?"}
+    Q3 -- yes --> DA["Deep Agents<br/>All-in-one agent harness"]
+    Q3 -- no --> LCX["LangChain<br/>Extend LangGraph when needed"]
+
+    style LC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style LCX fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style LG fill:#ed7969,stroke:#c45a4d,color:#fff
+    style DA fill:#ffd166,stroke:#d4a843,color:#333
+    style Q1 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style Q2 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style Q3 fill:#f4f4f4,stroke:#bcbcbc,color:#333

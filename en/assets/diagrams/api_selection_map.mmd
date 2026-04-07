@@ -1,0 +1,21 @@
+flowchart TD
+    NEED{"What is more important?"}
+    NEED -->|명시적 노드, 조건 분기, 정밀 제어| GRAPH["Graph API"]
+    NEED -->|Concise task function, Pythonic flow| FUNC["Functional API"]
+    GRAPH --> BOTH["Both run on Pregel runtime"]
+    FUNC --> BOTH
+    GRAPH --> GUSE["Recommendation situation
+- Complex state transitions
+- Visual debugging
+- Subgraph combination"]
+    FUNC --> FUSE["Recommendation situation
+- Sequential tasks
+- Durability @task
+- Less boilerplate"]
+
+    style GRAPH fill:#ed7969,stroke:#c45a4d,color:#fff
+    style FUNC fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style BOTH fill:#ffd166,stroke:#d4a843,color:#333
+    style NEED fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style GUSE fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style FUSE fill:#f4f4f4,stroke:#bcbcbc,color:#333

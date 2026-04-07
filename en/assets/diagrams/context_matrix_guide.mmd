@@ -1,0 +1,22 @@
+flowchart TB
+    subgraph row1["Single run"]
+        A["Static Runtime<br/>context_schema<br/><i>User ID, DB connection, permissions</i>"]
+        B["Dynamic Runtime<br/>state_schema / AgentState<br/><i>messages, intermediate results, retry_count</i>"]
+    end
+
+    subgraph row2["Cross-conversation"]
+        C["Store Memory<br/>InMemoryStore / DB Store<br/><i>Preferences, long-term memory, and learning outcomes.</i>"]
+        D["Persistent Config<br/><i>App policy, skill catalog</i>"]
+    end
+
+    M1["immutability"] --> A
+    M2["variable"] --> B
+    M2 --> C
+    M1 --> D
+
+    style A fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style B fill:#ed7969,stroke:#c45a4d,color:#fff
+    style C fill:#ffd166,stroke:#d4a843,color:#333
+    style D fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style M1 fill:#ffffff,stroke:#888,color:#333
+    style M2 fill:#ffffff,stroke:#888,color:#333

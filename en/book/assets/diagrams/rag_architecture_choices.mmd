@@ -1,0 +1,26 @@
+flowchart LR
+    subgraph A["2-Step RAG"]
+        A1["Retrieve once"] --> A2["Generate once"]
+    end
+
+    subgraph B["Agentic RAG"]
+        B1["Agent decides
+when to retrieve"] --> B2["Tool calls / retries"] --> B3["Answer"]
+    end
+
+    subgraph C["LangGraph Custom RAG"]
+        C1["Retrieve"] --> C2["Grade"] --> C3{"Relevant?"}
+        C3 -- yes --> C4["Generate"]
+        C3 -- no --> C5["Rewrite"] --> C1
+    end
+
+    style A1 fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style A2 fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style B1 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style B2 fill:#ffd166,stroke:#d4a843,color:#333
+    style B3 fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style C1 fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style C2 fill:#ffd166,stroke:#d4a843,color:#333
+    style C3 fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style C4 fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style C5 fill:#ed7969,stroke:#c45a4d,color:#fff

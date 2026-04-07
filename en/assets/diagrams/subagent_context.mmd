@@ -1,0 +1,18 @@
+graph LR
+    subgraph Main["main agent"]
+        A["user questions"]
+        B["final response"]
+    end
+    subgraph Sub["Subagent (isolated context)"]
+        C["Search 1 → Results (3K)"]
+        D["Search 2 → Results (5K)"]
+        E["Read file → contents (2K)"]
+        F["analyze..."]
+        G["→ Final summary (500 tokens)"]
+    end
+
+    A -->|"call task"| C
+    G -->|"return summary"| B
+
+    style Main fill:#d4eff1,stroke:#83ced2,color:#333
+    style Sub fill:#fde0dc,stroke:#ed7969,color:#333

@@ -1,0 +1,308 @@
+book:
+  title: Agent Handbook with LangChain, LangGraph, DeepAgents
+  subtitle: A Practical Guide to AI Agent Development
+  author: BAEM1N
+  date: '2026'
+  language: en
+skip_patterns:
+- Observability 설정
+- '# Observability'
+- langfuse_handler
+- lf_config
+- LANGSMITH_TRACING
+output_truncate_lines: 30
+parts:
+- number: 1
+  title: Agent Foundations
+  subtitle: Foundations of AI Agents
+  source_dir: 01_beginner
+  chapters:
+  - source: 00_setup.ipynb
+    output: ch00.typ
+    title: Environment Setup
+    diagrams: []
+  - source: 01_llm_basics.ipynb
+    output: ch01.typ
+    title: LLM Basics
+    diagrams:
+    - message-types
+  - source: 02_langchain_basics.ipynb
+    output: ch02.typ
+    title: LangChain Basics
+    diagrams:
+    - beginner-overview
+  - source: 03_langchain_memory.ipynb
+    output: ch03.typ
+    title: LangChain Memory
+    diagrams: []
+  - source: 04_langgraph_basics.ipynb
+    output: ch04.typ
+    title: LangGraph Basics
+    diagrams:
+    - react-loop-basic
+  - source: 05_deep_agents_basics.ipynb
+    output: ch05.typ
+    title: Deep Agents Basics
+    diagrams: []
+  - source: 06_comparison.ipynb
+    output: ch06.typ
+    title: Framework Comparison
+    diagrams:
+    - framework-selection
+  - source: 07_mini_project.ipynb
+    output: ch07.typ
+    title: Mini Project
+    diagrams: []
+- number: 2
+  title: LangChain
+  subtitle: Building Blocks for AI Applications
+  source_dir: 02_langchain
+  chapters:
+  - source: 01_introduction.ipynb
+    output: ch01.typ
+    title: Introduction to LangChain
+    diagrams:
+    - langchain-arch
+  - source: 02_quickstart.ipynb
+    output: ch02.typ
+    title: Quickstart
+    diagrams: []
+  - source: 03_models_and_messages.ipynb
+    output: ch03.typ
+    title: Models and Messages
+    diagrams: []
+  - source: 04_tools_and_structured_output.ipynb
+    output: ch04.typ
+    title: Tools and Structured Output
+    diagrams:
+    - agent-tool-llm-cycle
+  - source: 05_memory_and_streaming.ipynb
+    output: ch05.typ
+    title: Memory and Streaming
+    diagrams:
+    - memory-flow
+  - source: 06_middleware.ipynb
+    output: ch06.typ
+    title: Middleware
+    diagrams:
+    - middleware-pipeline
+  - source: 07_hitl_and_runtime.ipynb
+    output: ch07.typ
+    title: HITL and Runtime
+    diagrams: []
+  - source: 08_multi_agent.ipynb
+    output: ch08.typ
+    title: Multi-Agent
+    diagrams:
+    - multi-agent-patterns
+  - source: 09_custom_workflow_and_rag.ipynb
+    output: ch09.typ
+    title: Custom Workflow and RAG
+    diagrams: []
+  - source: 10_production.ipynb
+    output: ch10.typ
+    title: Production
+    diagrams: []
+  - source: 11_mcp.ipynb
+    output: ch11.typ
+    title: MCP
+    diagrams:
+    - mcp-protocol
+  - source: 12_frontend_streaming.ipynb
+    output: ch12.typ
+    title: Frontend Streaming
+    diagrams: []
+  - source: 13_guardrails.ipynb
+    output: ch13.typ
+    title: Guardrails
+    diagrams:
+    - guardrails-flow
+- number: 3
+  title: LangGraph
+  subtitle: Stateful Agent Orchestration
+  source_dir: 03_langgraph
+  chapters:
+  - source: 01_introduction.ipynb
+    output: ch01.typ
+    title: Introduction to LangGraph
+    diagrams:
+    - stategraph-structure
+  - source: 02_graph_api.ipynb
+    output: ch02.typ
+    title: Graph API Basics
+    diagrams: []
+  - source: 03_functional_api.ipynb
+    output: ch03.typ
+    title: Functional API Basics
+    diagrams:
+    - functional-api-flow
+  - source: 04_workflows.ipynb
+    output: ch04.typ
+    title: Workflow Patterns
+    diagrams:
+    - workflow-patterns
+  - source: 05_agents.ipynb
+    output: ch05.typ
+    title: Building Agents
+    diagrams: []
+  - source: 06_persistence_and_memory.ipynb
+    output: ch06.typ
+    title: Persistence and Memory
+    diagrams:
+    - persistence-checkpointer
+  - source: 07_streaming.ipynb
+    output: ch07.typ
+    title: Streaming
+    diagrams: []
+  - source: 08_interrupts_and_time_travel.ipynb
+    output: ch08.typ
+    title: Interrupts and Time Travel
+    diagrams:
+    - interrupt-resume
+  - source: 09_subgraphs.ipynb
+    output: ch09.typ
+    title: Subgraphs
+    diagrams:
+    - subgraph-composition
+  - source: 10_production.ipynb
+    output: ch10.typ
+    title: Production
+    diagrams: []
+  - source: 11_local_server.ipynb
+    output: ch11.typ
+    title: Local Server
+    diagrams: []
+  - source: 12_durable_execution.ipynb
+    output: ch12.typ
+    title: Durable Execution
+    diagrams: []
+  - source: 13_api_guide_and_pregel.ipynb
+    output: ch13.typ
+    title: API Guide and Pregel
+    diagrams: []
+- number: 4
+  title: Deep Agents
+  subtitle: Framework-Agnostic Agent Building
+  source_dir: 04_deepagents
+  chapters:
+  - source: 01_introduction.ipynb
+    output: ch01.typ
+    title: Introduction to Deep Agents
+    diagrams:
+    - deepagent-arch
+  - source: 02_quickstart.ipynb
+    output: ch02.typ
+    title: Quickstart
+    diagrams: []
+  - source: 03_customization.ipynb
+    output: ch03.typ
+    title: Customization
+    diagrams: []
+  - source: 04_backends.ipynb
+    output: ch04.typ
+    title: Backends
+    diagrams:
+    - backend-types
+  - source: 05_subagents.ipynb
+    output: ch05.typ
+    title: Subagents
+    diagrams:
+    - subagent-delegation
+  - source: 06_memory_and_skills.ipynb
+    output: ch06.typ
+    title: Memory and Skills
+    diagrams:
+    - memory-skills
+  - source: 07_advanced.ipynb
+    output: ch07.typ
+    title: Advanced Features
+    diagrams: []
+  - source: 08_harness.ipynb
+    output: ch08.typ
+    title: Agent Harness
+    diagrams:
+    - harness-lifecycle
+  - source: 09_comparison.ipynb
+    output: ch09.typ
+    title: Framework Comparison
+    diagrams: []
+  - source: 10_sandboxes_and_acp.ipynb
+    output: ch10.typ
+    title: Sandboxes and ACP
+    diagrams: []
+- number: 5
+  title: Advanced Patterns
+  subtitle: Advanced Agent Patterns
+  source_dir: 05_advanced
+  chapters:
+  - source: 00_migration.ipynb
+    output: ch00.typ
+    title: Migration from v0 to v1
+    diagrams: []
+  - source: 01_middleware.ipynb
+    output: ch01.typ
+    title: Advanced Middleware
+    diagrams: []
+  - source: 02_multi_agent_subagents.ipynb
+    output: ch02.typ
+    title: 'Multi-Agent: Subagents'
+    diagrams:
+    - supervisor-pattern
+  - source: 03_multi_agent_handoffs_router.ipynb
+    output: ch03.typ
+    title: 'Multi-Agent: Handoffs and Router'
+    diagrams:
+    - handoff-state-machine
+  - source: 04_context_memory.ipynb
+    output: ch04.typ
+    title: Context and Memory
+    diagrams: []
+  - source: 05_agentic_rag.ipynb
+    output: ch05.typ
+    title: Agentic RAG
+    diagrams:
+    - agentic-rag-pipeline
+  - source: 06_sql_agent.ipynb
+    output: ch06.typ
+    title: SQL Agent
+    diagrams: []
+  - source: 07_data_analysis.ipynb
+    output: ch07.typ
+    title: Data Analysis
+    diagrams: []
+  - source: 08_voice_agent.ipynb
+    output: ch08.typ
+    title: Voice Agent
+    diagrams: []
+  - source: 09_production.ipynb
+    output: ch09.typ
+    title: Production Deployment
+    diagrams:
+    - production-deploy
+- number: 6
+  title: Applied Examples
+  subtitle: Real-World Applications
+  source_dir: 06_examples
+  chapters:
+  - source: 01_rag_agent.ipynb
+    output: ch01.typ
+    title: RAG Agent
+    diagrams:
+    - rag-agent-flow
+  - source: 02_sql_agent.ipynb
+    output: ch02.typ
+    title: SQL Agent
+    diagrams: []
+  - source: 03_data_analysis_agent.ipynb
+    output: ch03.typ
+    title: Data Analysis Agent
+    diagrams: []
+  - source: 04_ml_agent.ipynb
+    output: ch04.typ
+    title: ML Agent
+    diagrams: []
+  - source: 05_deep_research_agent.ipynb
+    output: ch05.typ
+    title: Deep Research Agent
+    diagrams:
+    - deep-research-workflow

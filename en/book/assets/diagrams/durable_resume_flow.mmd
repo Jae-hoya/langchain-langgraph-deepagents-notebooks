@@ -1,0 +1,22 @@
+flowchart TD
+    START["Run start"]
+    T1["@task A complete<br/>checkpoint saved"]
+    T2["@task B running"]
+    FAIL["worker crash / timeout"]
+    RESTORE["Load last checkpoint"]
+    RESUME["Resume from task B boundary"]
+    T3["Remaining tasks"]
+    END["Final result"]
+
+    START --> T1 --> T2 --> FAIL
+    FAIL --> RESTORE --> RESUME --> T3 --> END
+    T2 -. side effects must be idempotent .-> FAIL
+
+    style START fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style T1 fill:#ffd166,stroke:#d4a843,color:#333
+    style T2 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style FAIL fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style RESTORE fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style RESUME fill:#ffd166,stroke:#d4a843,color:#333
+    style T3 fill:#ed7969,stroke:#c45a4d,color:#fff
+    style END fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c

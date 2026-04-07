@@ -1,0 +1,10 @@
+graph TD
+    HOST["agent (external)<br/>Secret storage + tool call management"]
+    API["Sandbox API"]
+    SB["Sandbox (quarantine)<br/>Code execution + network restrictions"]
+
+    HOST --> API --> SB
+
+    style HOST fill:#d4eff1,stroke:#83ced2,color:#333
+    style API fill:#ffffff,stroke:#bcbcbc,color:#333
+    style SB fill:#fde0dc,stroke:#ed7969,color:#333

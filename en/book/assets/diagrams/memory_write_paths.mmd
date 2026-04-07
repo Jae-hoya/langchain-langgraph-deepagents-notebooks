@@ -1,0 +1,22 @@
+flowchart LR
+    U["User request"] --> S["Static context<br/>user_id, role, session meta"]
+    U --> R["Runtime state<br/>messages, intermediate results"]
+    U --> M["Store lookup<br/>preferences, episodic memory"]
+
+    S --> A["Agent / Graph execution"]
+    R --> A
+    M --> A
+
+    A --> T["Tool calls"]
+    T --> R2["Hot path write<br/>state update / immediate memory"]
+    T --> B["Background job<br/>summary / semantic indexing"]
+    B --> M2["Long-term store"]
+    R2 --> A
+    M2 --> A
+
+    style U fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style A fill:#ed7969,stroke:#c45a4d,color:#fff
+    style T fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
+    style R2 fill:#ffd166,stroke:#d4a843,color:#333
+    style B fill:#f4f4f4,stroke:#bcbcbc,color:#333
+    style M2 fill:#ffd166,stroke:#d4a843,color:#333
