@@ -26,7 +26,7 @@ LangChain v1 is an integrated framework for building LLM-based agents. It is org
 
 === Three-Layer Structure
 
-#image("../../assets/images/langchain_3layer.png")
+#image("../../../../book/assets/diagrams/png/langchain_3layer.png")
 
 #table(
   columns: 3,
@@ -89,7 +89,7 @@ The central design idea in LangChain v1 is that _every agent runs as a LangGraph
 
 The ReAct (Reasoning + Acting) pattern is the default operating model for LangChain v1 agents. The agent repeatedly runs the following loop:
 
-#image("../../assets/images/react_loop.png")
+#image("../../../../book/assets/diagrams/png/react_loop.png")
 
 === Key Characteristics
 

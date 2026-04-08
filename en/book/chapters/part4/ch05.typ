@@ -49,7 +49,7 @@ When too much intermediate data builds up in the main context, the agent can los
 
 === How Subagents Help
 
-#image("../../assets/images/subagent_context.png")
+#image("../../../../book/assets/diagrams/png/subagent_context.png")
 
 The main agent receives only a _short summary_, so its context stays compact and focused.
 
@@ -284,7 +284,7 @@ config = {
 
 You can combine several subagents to build a pipeline such as _collect → analyze → write_.
 
-#image("../../assets/images/subagent_pipeline.png")
+#image("../../../../book/assets/diagrams/png/subagent_pipeline.png")
 
 
 #code-block(`````python

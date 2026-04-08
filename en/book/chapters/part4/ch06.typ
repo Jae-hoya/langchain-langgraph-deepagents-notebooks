@@ -45,7 +45,7 @@ But a useful assistant often needs to preserve information _across threads_, suc
 
 === Solution: `CompositeBackend`
 
-#image("../../assets/images/composite_backend.png")
+#image("../../../../book/assets/diagrams/png/composite_backend.png")
 
 Files stored under `/memories/` can be accessed _from any conversation thread_.
 

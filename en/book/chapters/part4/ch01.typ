@@ -32,7 +32,7 @@ It is built on top of LangChain's core agent components, and it uses _LangGraph_
 
 === Architecture Overview
 
-#image("../../assets/images/deepagents_architecture.png")
+#image("../../../../book/assets/diagrams/png/deepagents_architecture.png")
 
 
 #line(length: 100%, stroke: 0.5pt + luma(200))

@@ -37,7 +37,7 @@ print("Model ready:", model.model_name)
 
 Middleware is the mechanism that _adds hooks to each stage of the agent execution pipeline_ so you can control how the agent behaves.
 
-#image("../../assets/images/middleware_pipeline.png")
+#image("../../../../book/assets/diagrams/png/middleware_pipeline.png")
 
 _Five middleware hooks:_
 

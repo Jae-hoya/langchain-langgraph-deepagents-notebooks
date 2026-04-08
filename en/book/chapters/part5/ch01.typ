@@ -443,7 +443,7 @@ When registering multiple middleware, you can prevent unexpected behavior by acc
 
 `middleware=[A, B, C]` Upon registration:
 
-#image("../../assets/images/middleware_execution_order.png")
+#image("../../../../book/assets/diagrams/png/middleware_execution_order.png")
 
 === Practical tips
 - _PII detection must be registered before logging_ so that PII is not included in the log.

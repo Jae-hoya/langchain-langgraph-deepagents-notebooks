@@ -11,7 +11,7 @@
   #place(top + left, rect(width: 100%, height: 3pt, fill: color-primary))
 
   #place(right + top, dx: -32pt, dy: 48pt)[
-    #image("../assets/baeumai-symbol.png", width: 72pt)
+    #image("../../../book/assets/baeumai-symbol.png", width: 72pt)
   ]
 
   #pad(left: 48pt, right: 48pt, top: 72pt)[
@@ -52,7 +52,7 @@
       columns: (auto, 1fr, auto),
       column-gutter: 12pt,
       align: (left + horizon, left + horizon, right + horizon),
-      image("../assets/baeumai-logo.png", height: 16pt),
+      image("../../../book/assets/baeumai-logo.png", height: 16pt),
       [],
       text(size: 10pt, fill: luma(150), font: font-body)[#book-date],
     )

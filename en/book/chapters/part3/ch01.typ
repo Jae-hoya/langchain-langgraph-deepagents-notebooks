@@ -69,7 +69,7 @@ LangGraph defines workflow based on _graph structure_.
 
 === Graph structure diagram
 
-#image("../../assets/images/stategraph_structure.png")
+#image("../../../../book/assets/diagrams/png/stategraph_structure.png")
 
 == 1.3 Two APIs
 

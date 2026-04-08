@@ -28,11 +28,11 @@ model = ChatOpenAI(model="gpt-4.1")
 
 == 4.4 Routing — Classification-based branching
 
-#image("../../assets/images/conditional_routing.png")
+#image("../../../../book/assets/diagrams/png/conditional_routing.png")
 
 == 4.5 Orchestrator-Worker — Create dynamic worker with Send()
 
-#image("../../assets/images/orchestrator_worker.png")
+#image("../../../../book/assets/diagrams/png/orchestrator_worker.png")
 
 == 4.6 Evaluator-Optimizer — Generate-evaluation iteration loop
 

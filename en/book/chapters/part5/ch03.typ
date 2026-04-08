@@ -34,7 +34,7 @@ model = ChatOpenAI(model="gpt-4.1")
 
 The Handoffs pattern is an architecture where a _single agent_ dynamically changes its behavior based on state variables. Rather than switching between multiple agents, one agent uses different sets of system prompts and tool depending on the step.
 
-#image("../../assets/images/handoffs_state_machine.png")
+#image("../../../../book/assets/diagrams/png/handoffs_state_machine.png")
 
 === Core Mechanism
 
@@ -274,7 +274,7 @@ support_agent = create_agent(
 
 The Router pattern is an architecture that classifies input and routes it to specialized agents. Unlike the Subagents pattern, Router distributes queries via a dedicated classification step (either a single LLM call or rule-based logic).
 
-#image("../../assets/images/router_fanout_fanin.png")
+#image("../../../../book/assets/diagrams/png/router_fanout_fanin.png")
 
 === Pipeline
 

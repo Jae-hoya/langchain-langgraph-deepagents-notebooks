@@ -28,7 +28,7 @@ model = ChatOpenAI(model="gpt-4.1")
 
 The Subagents pattern consists of a _three-tier architecture_. The supervisor is responsible for all routing, subagent does not interact directly with the user, and returns results to the supervisor.
 
-#image("../../assets/images/supervisor_subagents.png")
+#image("../../../../book/assets/diagrams/png/supervisor_subagents.png")
 
 #table(
   columns: 3,

@@ -34,7 +34,7 @@ Deep Agents' built-in file tools (`ls`, `read_file`, `write_file`, `edit_file`, 
 
 A backend abstracts the _storage layer_ that the agent uses to read and write files.
 
-#image("../../assets/images/backend_abstraction.png")
+#image("../../../../book/assets/diagrams/png/backend_abstraction.png")
 
 === Available Backends
 
@@ -151,7 +151,7 @@ print("StoreBackend agent created!")
 `CompositeBackend` routes different filesystem paths to different backends.
 A common pattern is to persist `/memories/*` while keeping everything else ephemeral.
 
-#image("../../assets/images/composite_backend.png")
+#image("../../../../book/assets/diagrams/png/composite_backend.png")
 
 
 #code-block(`````python
@@ -304,7 +304,7 @@ print("Search results:", custom_backend.grep_raw("Installation"))
 #line(length: 100%, stroke: 0.5pt + luma(200))
 == Backend Selection Guide
 
-#image("../../assets/images/backend_decision_tree.png")
+#image("../../../../book/assets/diagrams/png/backend_decision_tree.png")
 
 
 #line(length: 100%, stroke: 0.5pt + luma(200))

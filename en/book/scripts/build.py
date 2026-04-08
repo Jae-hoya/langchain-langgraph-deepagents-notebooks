@@ -11,7 +11,18 @@ def main() -> int:
     if not typst:
         print("typst is not installed")
         return 1
-    cmd = [typst, "compile", str(BOOK_DIR / "main.typ"), str(OUTPUT_PDF), "--font-path", str(BOOK_DIR / "fonts")]
+    repo_root = BOOK_DIR.parent.parent
+    shared_fonts = repo_root / "book" / "fonts"
+    cmd = [
+        typst,
+        "compile",
+        str(BOOK_DIR / "main.typ"),
+        str(OUTPUT_PDF),
+        "--root",
+        str(repo_root),
+        "--font-path",
+        str(shared_fonts),
+    ]
     result = subprocess.run(cmd, cwd=str(BOOK_DIR))
     return result.returncode
 

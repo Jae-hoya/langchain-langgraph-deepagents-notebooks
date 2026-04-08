@@ -40,7 +40,7 @@ Human-in-the-Loop is a workflow in which the agent _requires human approval_ bef
 
 === How it Works
 
-#image("../../assets/images/hitl_flow.png")
+#image("../../../../book/assets/diagrams/png/hitl_flow.png")
 
 === Required Condition
 - _Checkpointer_: required to preserve the agent's state between interrupt and resume
@@ -169,7 +169,7 @@ That prevents it from accessing the host machine's files, network, or credential
 
 _Use the sandbox as a tool_ (recommended)
 
-#image("../../assets/images/sandbox_architecture.png")
+#image("../../../../book/assets/diagrams/png/sandbox_architecture.png")
 
 === ⚠️ Security Guidelines
 - _Never put secrets inside the sandbox_ — the agent may leak them
